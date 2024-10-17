@@ -1,0 +1,109 @@
+/* Profile Page Styles */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 10px;
+  }
+  
+  .profile-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  .profile-header {
+    text-align: center;
+  }
+  
+  .profile-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .profile-name {
+    font-size: 24px;
+    margin-top: 10px;
+  }
+  
+  .profile-title {
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .password-section {
+    margin-top: 30px;
+  }
+  
+  .password-section h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .save-btn {
+    width: 100%;
+    margin-top: 10px;
+    padding:10px 10px;
+    margin-bottom:30px;
+  }
+  
+  .logout-section {
+    text-align: left;
+    margin-top: 30px;
+    margin-bottom:30px;
+    padding:10px;
+  }
+  
+  .logout-btn {
+    background-color: #dc3545;
+    margin-top: 10px;
+  }
+  
+  .logout-btn:hover {
+    background-color: #c82333;
+  }
+  
+  .separator {
+    border: none; 
+    border-top: 2px solid #808080;
+}

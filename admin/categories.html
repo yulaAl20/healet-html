@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/adminstyles.css">
+    <link rel="stylesheet" href="css/categories.css">
+    <title>Healet | Admin Panel</title>
+</head>
+
+<body>
+    <div class="side-menu">
+        <div class="brand-name">
+            <h1>Healet</h1>
+        </div>
+        <hr class="separator">
+        <ul>
+            <li><a href="admindash.html"><img src="images\dashboard (2).png" alt="">&nbsp; <span>Dashboard</span></a> </li>
+            <li><a href="categories.html"><img src="images\open-book.png" alt="">&nbsp;<span>Categories</span></a> </li>
+            <li><a href="products.html"><img src="images\vip.png" alt="">&nbsp;<span>Products</span></a> </li>
+            <li><a href="orders.html"><img src="images\loading.png" alt="">&nbsp;<span>Orders</span> </a></li>
+            <li><a href="pages.html"><img src="images\copy (2).png" alt="">&nbsp;<span>Pages</span></a> </li>
+            <li><a href="settings.html"><img src="images\settings.png" alt="">&nbsp;<span>Settings</span> </a></li>
+        </ul>
+        <!-- Log Out Button -->
+      <div class="logout-section">
+        <button class="btn logout-btn">Log Out</button>
+      </div>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <div class="nav">
+                <div class="search">
+                    <input type="text" placeholder="Search..">
+                    <button type="submit"><img src="images\search.png" alt=""></button>
+                </div>
+                <div class="user">
+                    <a href="#" class="btn">View Orders</a>
+                    <div class="img-case"><a href="adminprofile.html">
+                        <img src="images\user.png" alt=""> 
+                      </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="subheader">
+            <h2>Categories</h2>
+            <a href="addnewCategory.html">
+            <button class="add-new-btn">+ Add New</button></a>
+        </div>
+
+        <!-- Categories Cards Section -->
+        <div class="categories-grid">
+            <div class="category-card">
+                <div class="overlay1">
+                    <h4>Rings</h4>
+                </div>
+                <img src="images/o1.jpg" alt="Category Image">
+                <div class="overlay">
+                    <a href="viewrc.html" class="view-btn">View</a>
+                    <a href="manageC.html" class="manage-btn">Manage</a>
+                </div>
+            </div>
+            
+            <div class="category-card">
+                <div class="overlay1">
+                    <h4>Bangles</h4>
+                </div>
+                <img src="images/0qg0snsb.png" alt="Category Image">
+                <div class="overlay">
+                    <a href="viewbc.html" class="view-btn">View</a>
+                    <a href="manageC.html" class="manage-btn">Manage</a>
+                </div>
+            </div>
+
+            <div class="category-card">
+                <div class="overlay1">
+                    <h4>Necklace</h4>
+                </div>
+                <img src="images\azoqx8os.png" alt="Category Image">
+                <div class="overlay">
+                    <a href="viewnc.html" class="view-btn">View</a>
+                    <a href="manageC.html" class="manage-btn">Manage</a>
+                </div>
+            </div>
+            
+            <div class="category-card">
+                <div class="overlay1">
+                    <h4>Earrings</h4>
+                </div>
+                <img src="images/bridal-earrings-feature-1.jpg" alt="Category Image">
+                <div class="overlay">
+                    <a href="viewec.html" class="view-btn">View</a>
+                    <a href="manageC.html" class="manage-btn">Manage</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

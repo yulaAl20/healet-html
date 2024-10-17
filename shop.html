@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="icon" href="images/favicon.png" type="image/gif" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Healet</title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <!-- font awesome style -->
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+
+  <style>
+    /* Styling for smaller buttons */
+    .btn-small {
+      font-size: 12px;
+      padding: 5px 10px;
+    }
+
+    /* Sidebar cart styling */
+    #cart-sidebar {
+      position: fixed;
+      right: 0;
+      top: 70px;
+      width: 300px;
+      background-color: #f8f9fa;
+      padding: 15px;
+      box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+      height: calc(100% - 70px);
+      overflow-y: auto;
+      display: none; /* Initially hidden */
+    }
+
+    /* Navbar cart icon */
+    .cart-icon {
+      font-size: 24px;
+      position: relative;
+    }
+
+    /* Notification bubble on cart icon */
+    .cart-count {
+      position: absolute;
+      top: -8px;
+      right: -10px;
+      background: red;
+      color: white;
+      border-radius: 50%;
+      padding: 2px 6px;
+      font-size: 12px;
+    }
+
+    /* Styling the cart sidebar total */
+    #cart-sidebar .cart-total {
+      font-weight: bold;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- header section starts -->
+  <header class="header_section">
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#">
+          <span>HEALET</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarText">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="shop.html">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Blog</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link btn btn-outline-light" href="#">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link btn btn-outline-light" href="#">Register</a>
+            </li>
+            <!-- Cart icon with cart item count -->
+            <li class="nav-item">
+              <a class="nav-link cart-icon" href="javascript:void(0);" id="cart-toggle">
+                <i class="fa fa-shopping-cart"></i>
+                <span class="cart-count" id="cart-count">0</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- end header section -->
+
+  <!-- shop section -->
+  <section class="shop_section layout_padding">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>Products</h2>
+      </div>
+      <div class="row">
+        <!-- Product 1 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="box">
+            <a href="">
+              <div class="img-box">
+                <img src="images/p1.png" alt="">
+              </div>
+              <div class="detail-box">
+                <h6>Necklace</h6>
+                <h6>Price <span>$200</span></h6>
+              </div>
+            </a>
+            <button class="btn btn-primary btn-small add-to-cart" data-name="Necklace" data-price="200">Add to Cart</button>
+            <button class="btn btn-success btn-small buy-now" data-name="Necklace" data-price="200">Buy Now</button>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="box">
+            <a href="">
+              <div class="img-box">
+                <img src="images/p2.png" alt="">
+              </div>
+              <div class="detail-box">
+                <h6>Bracelet</h6>
+                <h6>Price <span>$150</span></h6>
+              </div>
+            </a>
+            <button class="btn btn-primary btn-small add-to-cart" data-name="Bracelet" data-price="150">Add to Cart</button>
+            <button class="btn btn-success btn-small buy-now" data-name="Bracelet" data-price="150">Buy Now</button>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="box">
+            <a href="">
+              <div class="img-box">
+                <img src="images/p3.png" alt="">
+              </div>
+              <div class="detail-box">
+                <h6>Earrings</h6>
+                <h6>Price <span>$120</span></h6>
+              </div>
+            </a>
+            <button class="btn btn-primary btn-small add-to-cart" data-name="Earrings" data-price="120">Add to Cart</button>
+            <button class="btn btn-success btn-small buy-now" data-name="Earrings" data-price="120">Buy Now</button>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="box">
+            <a href="">
+              <div class="img-box">
+                <img src="images/p4.png" alt="">
+              </div>
+              <div class="detail-box">
+                <h6>Ring</h6>
+                <h6>Price <span>$100</span></h6>
+              </div>
+            </a>
+            <button class="btn btn-primary btn-small add-to-cart" data-name="Ring" data-price="100">Add to Cart</button>
+            <button class="btn btn-success btn-small buy-now" data-name="Ring" data-price="100">Buy Now</button>
+          </div>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="box">
+            <a href="">
+              <div class="img-box">
+                <img src="images/p5.png" alt="">
+              </div>
+              <div class="detail-box">
+                <h6>Watch</h6>
+                <h6>Price <span>$250</span></h6>
+              </div>
+            </a>
+            <button class="btn btn-primary btn-small add-to-cart" data-name="Watch" data-price="250">Add to Cart</button>
+            <button class="btn btn-success btn-small buy-now" data-name="Watch" data-price="250">Buy Now</button>
+          </div>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="box">
+            <a href="">
+              <div class="img-box">
+                <img src="images/p6.png" alt="">
+              </div>
+              <div class="detail-box">
+                <h6>Wallet</h6>
+                <h6>Price <span>$80</span></h6>
+              </div>
+            </a>
+            <button class="btn btn-primary btn-small add-to-cart" data-name="Wallet" data-price="80">Add to Cart</button>
+            <button class="btn btn-success btn-small buy-now" data-name="Wallet" data-price="80">Buy Now</button>
+          </div>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="box">
+            <a href="">
+              <div class="img-box">
+                <img src="images/p7.png" alt="">
+              </div>
+              <div class="detail-box">
+                <h6>Sunglasses</h6>
+                <h6>Price <span>$180</span></h6>
+              </div>
+            </a>
+            <button class="btn btn-primary btn-small add-to-cart" data-name="Sunglasses" data-price="180">Add to Cart</button>
+            <button class="btn btn-success btn-small buy-now" data-name="Sunglasses" data-price="180">Buy Now</button>
+          </div>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="box">
+            <a href="">
+              <div class="img-box">
+                <img src="images/p8.png" alt="">
+              </div>
+              <div class="detail-box">
+                <h6>Backpack</h6>
+                <h6>Price <span>$220</span></h6>
+              </div>
+            </a>
+            <button class="btn btn-primary btn-small add-to-cart" data-name="Backpack" data-price="220">Add to Cart</button>
+            <button class="btn btn-success btn-small buy-now" data-name="Backpack" data-price="220">Buy Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end shop section -->
+
+  <!-- cart sidebar -->
+  <div id="cart-sidebar">
+    <h4>Your Cart</h4>
+    <ul id="cart-items"></ul>
+    <p class="cart-total">Total: $<span id="cart-total">0</span></p>
+    <button class="btn btn-primary btn-block">Checkout</button>
+  </div>
+
+  <!-- scripts -->
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script>
+    let cartItems = [];
+    let cartTotal = 0;
+
+    $(document).ready(function() {
+      // Toggle cart sidebar
+      $("#cart-toggle").on("click", function() {
+        $("#cart-sidebar").toggle();
+      });
+
+      // Add to cart functionality
+      $(".add-to-cart").on("click", function() {
+        let itemName = $(this).data("name");
+        let itemPrice = $(this).data("price");
+        let itemExists = false;
+
+        // Check if item already exists in cart
+        cartItems.forEach(function(item) {
+          if (item.name === itemName) {
+            item.quantity++;
+            itemExists = true;
+          }
+        });
+
+        // Add item to cart if it doesn't exist
+        if (!itemExists) {
+          cartItems.push({
+            name: itemName,
+            price: itemPrice,
+            quantity: 1
+          });
+        }
+
+        // Update cart total
+        cartTotal = 0;
+        cartItems.forEach(function(item) {
+          cartTotal += item.price * item.quantity;
+        });
+
+        // Update cart sidebar
+        $("#cart-items").html("");
+        cartItems.forEach(function(item) {
+          $("#cart-items").append("<li>" + item.name + " x " + item.quantity + " - $" + (item.price * item.quantity) + "</li>");
+        });
+        $("#cart-total").text(cartTotal.toFixed(2));
+        $("#cart-count").text(cartItems.length);
+      });
+    });
+  </script>
+</body>
+
+</html>

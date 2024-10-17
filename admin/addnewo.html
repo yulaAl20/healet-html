@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/adminstyles.css">
+    <link rel="stylesheet" href="css/categories.css">
+    <link rel="stylesheet" href="css/addnewstyles.css">
+    <title>Healet | Admin Panel</title>
+</head>
+
+<body>
+    <div class="side-menu">
+        <div class="brand-name">
+            <h1>Healet</h1>
+        </div>
+        <hr class="separator">
+        <ul>
+            <li><a href="admindash.html"><img src="images\dashboard (2).png" alt="">&nbsp; <span>Dashboard</span></a> </li>
+            <li><a href="categories.html"><img src="images\open-book.png" alt="">&nbsp;<span>Categories</span></a> </li>
+            <li><a href="products.html"><img src="images\vip.png" alt="">&nbsp;<span>Products</span></a> </li>
+            <li><a href="orders.html"><img src="images\loading.png" alt="">&nbsp;<span>Orders</span> </a></li>
+            <li><a href="pages.html"><img src="images\copy (2).png" alt="">&nbsp;<span>Pages</span></a> </li>
+            <li><a href="settings.html"><img src="images\settings.png" alt="">&nbsp;<span>Settings</span> </a></li>
+        </ul>
+        <!-- Log Out Button -->
+      <div class="logout-section">
+        <button class="btn logout-btn">Log Out</button>
+      </div>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <div class="nav">
+                <div class="search">
+                    <input type="text" placeholder="Search..">
+                    <button type="submit"><img src="images\search.png" alt=""></button>
+                </div>
+                <div class="user">
+                    <a href="#" class="btn">View Orders</a>
+                    <div class="img-case"><a href="adminprofile.html">
+                        <img src="images\user.png" alt=""> 
+                      </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="subheader">
+            <h2>Add New Item</h2>
+            <a href="viewI.html">
+            <button class="add-new-btn">view all</button></a>
+        </div>
+
+        <form action="action_page.php">
+            <div class="row">
+              <div class="col-25">
+                <label for="cid">Category ID</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="cid" name="Category id" placeholder="">
+              </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                  <label for="cname">Category Name</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" id="cname" name="Category Name" placeholder="">
+                </div>
+              </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="pid">Product ID</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="pid" name="productid" placeholder="">
+              </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                  <label for="pname">Product Name</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" id="pname" name="productname" placeholder="">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-25">
+                  <label for="pdescription">Product Description</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" id="pdescription" name="pdes" placeholder="">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-25">
+                  <label for="lname">Product Image</label>
+                </div>
+                <div class="col-75">
+                    <input type="file" id="myFile" name="filename">
+                </div>
+              </div>
+            <div class="row">
+              <input type="submit" value="Submit">
+            </div>
+          </form>
+    </div>
+
+</body>
+
+</html>

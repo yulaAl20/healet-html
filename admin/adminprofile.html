@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile</title>
+  <link rel="stylesheet" href="css/adminprofile.css"> <!-- Link to your CSS -->
+</head>
+
+<body>
+  <div class="profile-container">
+    <!-- Profile Section -->
+    <div class="profile-section">
+      <div class="profile-header">
+        <img src="images/user.png" alt="Profile Photo" class="profile-photo"> <!-- Profile Picture -->
+        <h2 class="profile-name">John Doe</h2> <!-- Profile Name -->
+        <p class="profile-title">Admin</p> <!-- Profile Title -->
+      </div>
+
+      <hr class="separator">
+
+      <!-- Password Change Form -->
+      <div class="password-section">
+        <h3>Change Password</h3>
+        <form action="#" method="post" class="password-form">
+          <div class="form-group">
+            <label for="current-password">Current Password</label>
+            <input type="password" id="current-password" name="current-password" required>
+          </div>
+          <div class="form-group">
+            <label for="new-password">New Password</label>
+            <input type="password" id="new-password" name="new-password" required>
+          </div>
+          <div class="form-group">
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+          </div>
+          <button type="submit" class="btn save-btn">Save</button>
+        </form>
+      </div>
+
+      <hr class="separator">
+
+      <!-- Log Out Button -->
+      <div class="logout-section">
+        <button class="btn logout-btn">Log Out</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

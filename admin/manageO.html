@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/adminstyles.css">
+    <link rel="stylesheet" href="css/categories.css">
+    <link rel="stylesheet" href="css/managestyles.css">
+    <title>Healet | Admin Panel</title>
+</head>
+
+<body>
+    <div class="side-menu">
+        <div class="brand-name">
+            <h1>Healet</h1>
+        </div>
+        <hr class="separator">
+        <ul>
+            <li><a href="admindash.html"><img src="images\dashboard (2).png" alt="">&nbsp; <span>Dashboard</span></a> </li>
+            <li><a href="categories.html"><img src="images\open-book.png" alt="">&nbsp;<span>Categories</span></a> </li>
+            <li><a href="products.html"><img src="images\vip.png" alt="">&nbsp;<span>Products</span></a> </li>
+            <li><a href="orders.html"><img src="images\loading.png" alt="">&nbsp;<span>Orders</span> </a></li>
+            <li><a href="pages.html"><img src="images\copy (2).png" alt="">&nbsp;<span>Pages</span></a> </li>
+            <li><a href="settings.html"><img src="images\settings.png" alt="">&nbsp;<span>Settings</span> </a></li>
+        </ul>
+        <!-- Log Out Button -->
+      <div class="logout-section">
+        <button class="btn logout-btn">Log Out</button>
+      </div>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <div class="nav">
+                <div class="search">
+                    <input type="text" placeholder="Search..">
+                    <button type="submit"><img src="images\search.png" alt=""></button>
+                </div>
+                <div class="user">
+                    <a href="#" class="btn">View Orders</a>
+                    <div class="img-case"><a href="adminprofile.html">
+                        <img src="images\user.png" alt=""> 
+                      </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="subheader">
+            <h2>Manage Order</h2>
+        </div>
+
+        <!-- User Details Section -->
+        <div class="order-section">
+            <h3>User Details</h3>
+            <div class="details">
+                <p><strong>Name:</strong> John Doe</p>
+                <p><strong>Email:</strong> johndoe@gmail.com</p>
+                <p><strong>Phone:</strong> +123456789</p>
+                <p><strong>Address:</strong> 123 Street, City, Country</p>
+            </div>
+        </div>
+
+        <!-- Order Details Section -->
+        <div class="order-section">
+            <h3>Order Details</h3>
+            <div class="details">
+                <p><strong>Order ID:</strong> #123456</p>
+                <p><strong>Date:</strong> 2024-10-15</p>
+                <p><strong>Total:</strong> $200.00</p>
+                <p><strong>Status:</strong> Pending</p>
+            </div>
+        </div>
+
+        <!-- Order Status Update Form -->
+        <div class="form-section">
+            <h3>Update Order</h3>
+            <form action="update_order.php" method="POST">
+                <div class="form-group">
+                    <label for="status">Order Status:</label>
+                    <select id="status" name="order_status">
+                        <option value="confirmed">Order Confirmed</option>
+                        <option value="shipped">Order Shipped</option>
+                        <option value="cancelled">Order Cancelled</option>
+                        <option value="delivered">Order Delivered</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="description">Description:</label>
+                    <textarea id="description" name="description" placeholder="Add any relevant information..."></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn-update">Update Order</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>

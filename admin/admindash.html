@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/adminstyles.css">
+    <title>Healet | Admin Panel</title>
+</head>
+
+<body>
+    <div class="side-menu">
+        <div class="brand-name">
+            <h1>Healet</h1>
+        </div>
+        <hr class="separator">
+        <ul>
+            <li><a href="admindash.html"><img src="images\dashboard (2).png" alt="">&nbsp; <span>Dashboard</span></a> </li>
+            <li><a href="categories.html"><img src="images\open-book.png" alt="">&nbsp;<span>Categories</span></a> </li>
+            <li><a href="products.html"><img src="images\vip.png" alt="">&nbsp;<span>Products</span></a> </li>
+            <li><a href="orders.html"><img src="images\loading.png" alt="">&nbsp;<span>Orders</span> </a></li>
+            <li><a href="pages.html"><img src="images\copy (2).png" alt="">&nbsp;<span>Pages</span></a> </li>
+            <li><a href="settings.html"><img src="images\settings.png" alt="">&nbsp;<span>Settings</span> </a></li>
+        </ul>
+        <!-- Log Out Button -->
+      <div class="logout-section">
+        <button class="btn logout-btn">Log Out</button>
+      </div>
+    </div>
+    <div class="container">
+        <div class="header">
+            <div class="nav">
+                <div class="search">
+                    <input type="text" placeholder="Search..">
+                    <button type="submit"><img src="images\search.png" alt=""></button>
+                </div>
+                <div class="user">
+                    <a href="viewo.html" class="btn">View Orders</a>
+                    <div class="img-case"><a href="adminprofile.html">
+                        <img src="images\user.png" alt=""> 
+                      </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="cards">
+                <div class="card">
+                    <div class="box">
+                        <h1>214</h1>
+                        <h3>Total Orders</h3>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <h1>53</h1>
+                        <h3>New Orders</h3>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <h1> 55</h1>
+                        <h3>Confirmed Orders</h3>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <h1>35</h1>
+                        <h3>Delivered Orders</h3>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <h1> 55</h1>
+                        <h3>Cancelled Orders</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="content-2">
+                <div class="recent-payments">
+                    <div class="title">
+                        <h2>Recent Payments</h2>
+                        <a href="#" class="btn view-all-btn">View All</a>
+                    </div>
+                    <table>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Name</th>
+                            <th>Amount</th>
+                            <th>Option</th>
+                        </tr>
+                        <tr>
+                            <td>20013056</td>
+                            <td>John Doe</td>
+                            <td>$120</td>
+                            <td><a href="#" class="btn">View</a></td>
+                        </tr>
+                        <tr>
+                            <td>30042567</td>
+                            <td>John Smith</td>
+                            <td>$120</td>
+                            <td><a href="#" class="btn">View</a></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

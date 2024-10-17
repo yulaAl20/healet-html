@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jewelry Store - Sign In</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #fff;
+            width: 450px;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .top-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 25px;
+        }
+
+        .top-buttons button {
+            background-color: #003300;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease;
+        }
+
+        .top-buttons button.active {
+            background-color: #fff;
+            color: #003300;
+            border: 2px solid #003300;
+        }
+
+        .top-buttons button:hover {
+            background-color: #004400;
+        }
+
+        .login-form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        input[type="email"],
+        input[type="password"],
+        input[type="text"],
+        input[type="tel"] {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-sizing: border-box;
+            font-size: 15px;
+            background-color: #fafafa;
+        }
+
+        button[type="submit"] {
+            background-color: #003300;
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 15px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #004400;
+        }
+
+        .remember-forgot {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin: 15px 0;
+            font-size: 14px;
+        }
+
+        .remember-forgot a {
+            color: #003300;
+            text-decoration: none;
+        }
+
+        .remember-forgot a:hover {
+            text-decoration: underline;
+        }
+
+        .register-link {
+            margin-top: 20px;
+            color: #003300;
+            text-decoration: none;
+        }
+
+        .register-link:hover {
+            text-decoration: underline;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 12px;
+            margin-top: -10px;
+            margin-bottom: 10px;
+            display: none; /* Hidden by default */
+        }
+
+        /* Mobile responsive adjustments */
+        @media (max-width: 600px) {
+            .container {
+                width: 90%;
+            }
+
+            .top-buttons button {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Top Buttons (Sign in / Register) -->
+        <div class="top-buttons">
+            <button id="signInBtn" class="active" onclick="toggleForm('signIn')">Sign In</button>
+            <button id="registerBtn" onclick="toggleForm('register')">Register</button>
+        </div>
+
+        <!-- Sign In Form -->
+        <div class="login-form" id="signInForm">
+            <form id="loginForm" action="login_process.php" method="post" onsubmit="return validateSignInForm()">
+                <input type="email" id="email" name="email" placeholder="Email Address" required>
+                <input type="password" id="password" name="password" placeholder="Password" required>
+
+                <!-- Remember me and Forgot password -->
+                <div class="remember-forgot">
+                    <label>
+                        <input type="checkbox" name="remember"> Remember me
+                    </label>
+                    <a href="#">Forgotten your password?</a>
+                </div>
+
+                <button type="submit">Sign In</button>
+            </form>
+            <a href="register.html" class="register-link">Don't have an account? Register now</a>
+        </div>
+
+        <!-- Register Form (Hidden initially) -->
+        <div class="login-form" id="registerForm" style="display:none;">
+            <form id="registerFormElement" action="register_process.php" method="post" onsubmit="return validateRegisterForm()">
+                <input type="text" id="registerName" name="name" placeholder="Full Name" required>
+                <input type="email" id="registerEmail" name="email" placeholder="Email Address" required>
+                <input type="tel" id="registerPhone" name="phone" placeholder="Phone Number" required>
+                <div class="error-message" id="phoneError"></div>
+                <input type="password" id="registerPassword" name="password" placeholder="Password" required>
+                <div class="error-message" id="passwordError"></div>
+                <input type="password" id="registerConfirmPassword" name="confirmPassword" placeholder="Confirm Password" required>
+                <div class="error-message" id="confirmPasswordError"></div>
+
+                <button type="submit">Register</button>
+            </form>
+            <a href="#" class="register-link">Already have an account? Sign in</a>
+        </div>
+    </div>
+
+    <script>
+        // Function to toggle between Sign In and Register forms
+        function toggleForm(formType) {
+            if (formType === 'signIn') {
+                document.getElementById('signInForm').style.display = 'block';
+                document.getElementById('registerForm').style.display = 'none';
+                document.getElementById('signInBtn').classList.add('active');
+                document.getElementById('registerBtn').classList.remove('active');
+            } else {
+                document.getElementById('signInForm').style.display = 'none';
+                document.getElementById('registerForm').style.display = 'block';
+                document.getElementById('signInBtn').classList.remove('active');
+                document.getElementById('registerBtn').classList.add('active');
+            }
+        }
+
+        // Sign In Validation Function
+        function validateSignInForm() {
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+
+            var valid = true;
+
+            // Clear previous error messages
+            document.getElementById("passwordError").style.display = "none";
+
+            if (!emailRegex.test(email)) {
+                alert("Please enter a valid email address.");
+                valid = false;
+            }
+
+            if (password.length < 6) {
+                document.getElementById("passwordError").textContent = "Password must be at least 6 characters long.";
+                document.getElementById("passwordError").style.display = "block";
+                valid = false;
+            }
+
+            return valid;
+        }
+
+        // Register Validation Function
+        function validateRegisterForm() {
+            var name = document.getElementById("registerName").value;
+            var email = document.getElementById("registerEmail").value;
+            var phone = document.getElementById("registerPhone").value;
+            var password = document.getElementById("registerPassword").value;
+            var confirmPassword = document.getElementById("registerConfirmPassword").value;
+            var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            var phoneRegex = /^\d{10}$/; // Adjust regex as needed (e.g., for country code)
+
+            var valid = true;
+
+            // Clear previous error messages
+            document.getElementById("phoneError").style.display = "none";
+            document.getElementById("passwordError").style.display = "none";
+            document.getElementById("confirmPasswordError").style.display = "none";
+
+            if (!emailRegex.test(email)) {
+                alert("Please enter a valid email address.");
+                valid = false;
+            }
+
+            if (!phoneRegex.test(phone)) {
+                document.getElementById("phoneError").textContent = "Please enter a valid 10-digit phone number.";
+                document.getElementById("phoneError").style.display = "block";
+                valid = false;
+            }
+
+            if (password.length < 6) {
+                document.getElementById("passwordError").textContent = "Password must be at least 6 characters long.";
+                document.getElementById("passwordError").style.display = "block";
+                valid = false;
+            }
+
+            if (password !== confirmPassword) {
+                document.getElementById("confirmPasswordError").textContent = "Passwords do not match.";
+                document.getElementById("confirmPasswordError").style.display = "block";
+                valid = false;
+            }
+
+            return valid;
+        }
+    </script>
+
+</body>
+</html>
